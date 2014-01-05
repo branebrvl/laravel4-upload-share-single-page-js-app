@@ -39,5 +39,5 @@ Route::post('foo/bar', function() {
 });
 
 Route::get('foo/bar', function() {
-  var_dump('$file');
+  var_dump(storage_path());
 });

@@ -3,6 +3,7 @@
 /public/node_modules
 /public/vendor/bower_components
 /public/tmp
+/public/upload
 composer.phar
 composer.lock
 .DS_Store
