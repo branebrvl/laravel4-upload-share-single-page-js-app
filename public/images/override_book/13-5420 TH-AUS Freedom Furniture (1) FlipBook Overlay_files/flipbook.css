@@ -1,0 +1,332 @@
+* { padding: 0; margin: 0; }
+.hidden { display:none; }
+#flipbook_loading {
+	width: 1100px;
+	height:610px;
+	text-align: center;
+	margin-top: 290px;
+	font-family: Arial;
+	position: absolute;
+	z-index: 1;
+}
+#flashplayer {
+	position: absolute;
+	z-index: 10;
+	left: 10px;
+}
+#flipbook_close {
+	background-image:url('../img/close_btn.png');
+	width: 87px;
+	height: 31px;
+	position: absolute;
+	opacity:0;
+	z-index: 3;
+	top:8px;
+	left:930px;
+}
+#flipbook_holder {
+	width: 1100px;
+	height: 600px;
+	margin-top: 10px;
+	position: absolute;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 2;
+}
+#flipbook{
+	width:998px;
+	height:477px;
+	position:absolute;
+	top:112px;
+	left:48px;
+	z-index:3;
+}
+
+/* FLIPBOOK PAGES */
+#flipbook .cover{
+	background-image:url('../img/cover.png');
+}
+#flipbook .even{
+	background-position:top left;
+}
+#flipbook .odd{
+	background-position:top right;
+}
+#flipbook .hardcover.hard1{
+	background-position:top left;
+}
+#flipbook .hardcover.hard2{
+	background-position:top right;
+}
+#flipbook .page{
+	width:998px;
+	height:477px;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+#background {
+	background: #74cbc9;
+	width: 1100px;
+	height: 600px;
+	position:absolute;
+	z-index: 1;
+	top:0;
+	left:0;
+}
+#background .bg_a {
+	position:absolute;
+	top:140px;
+	left: 65px;
+	background: url('../img/bg_a.png');
+	width:317px;
+	height:248px;
+}
+#background .bg_b {
+	position:absolute;
+	opacity: 0;
+	top:29px;
+	left: 70px;
+	background: url('../img/bg_b.png');
+	width:216px;
+	height:66px;
+}
+#flipbook .base{
+	background-image:url('../img/base.png');
+}
+#flipbook .hardcover{
+	background-image:url('../img/hard.png');
+	width:998px;
+	height:477px;
+}
+#flipbook .set3{
+	background-image:url('../img/set3.png');
+}
+#flipbook .set4{
+	background-image:url('../img/set4.png');
+}
+#flipbook .set5{
+	background-image:url('../img/set5.png');
+}
+#flipbook .set6{
+	background-image:url('../img/set6.png');
+}
+#flipbook .set7{
+	background-image:url('../img/set7.png');
+}
+
+#flipbook .hardcover .extra {
+	background-image:url('../img/page_2.png');
+	height:477px;
+	width:499px;
+}
+#flipbook .base .extra {
+	background-image:url('../img/page_3.png');
+	height:477px;
+	width:499px;
+}
+
+#front {
+	background-image:url('../img/hard.png');
+	height:477px;
+	position:absolute;
+	display:none;
+	left: 48px;
+	top: 112px;
+	width: 499px;
+	z-index: 2;
+}
+#back {
+	background: url('../img/hard.png') transparent 500px 0;
+	height: 477px;
+	position:absolute;
+	opacity: 0;
+	left: 547px;
+	top: 112px;
+	width: 499px;
+	z-index: 2;
+}
+
+/* HOTSPOTS */
+.hotspot_obj {
+	position: absolute;
+	z-index: 100;
+	top:300px;
+	left:300px;
+}
+.hotspot_obj .hotspot {
+	position: absolute;
+	z-index: 3;
+	top:-13px;
+	left:-14px;
+	width: 36px;
+	height: 35px;
+	background: url('../img/float_hs.png') transparent;
+}
+.hotspot_obj .hotspot .hit_area {
+	position: absolute;
+	top:-11px;
+	left:-11px;
+	width: 50px;
+	height: 50px;
+	background: #f00;
+	opacity: 0;
+}
+.hotspot_obj .window {
+	position: absolute;
+	z-index: 2;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #fff;
+	width: 140px;
+	height: 89px;
+	background: url('../img/float_bg.png') 0 0 transparent;
+	overflow: hidden;
+}
+.hotspot_obj .window.pa {
+	top:-80px;
+	left:-5px;
+}
+.hotspot_obj .window.pb {
+	top:0;
+	left:-5px;
+}
+.hotspot_obj .window.pc {
+	top:-80px;
+	left:-130px;
+}
+.hotspot_obj .window.pd {
+	top:0;
+	left:-130px;
+}
+.hotspot_obj .window .floater_t1 {
+	font-size: 15px;
+	margin-left: 14px;
+	margin-top: 9px;
+	text-transform: uppercase;
+	cursor: default;
+}
+.hotspot_obj .window .floater_t2 {
+	font-size: 11px;
+	margin-left: 14px;
+	margin-top: -2px;
+	cursor: default;
+	width: 108px;
+}
+.hotspot_obj .window .floater_t3 {
+	font-size: 12px;
+	margin-left: 14px;
+	margin-top: -1px;
+	cursor: default;
+}
+.hotspot_obj .window .btn_holder {
+	width:110px;
+	height: 18px;
+	margin: 2px 12px 0;
+	cursor: default;
+}
+.hotspot_obj .window .btn_holder.active {
+	cursor: pointer;
+}
+.hotspot_obj .window .btn_holder .btn_txt {
+	color: #ff4800;
+	font-size: 14px;
+	float: left;
+	width: 90px;
+	margin-left: 1px;
+	margin-top: 1px;
+}
+.hotspot_obj .window .btn_holder .btn_txt.hover {
+	color: #ff1c00;
+}
+.hotspot_obj .window .btn_holder .btn_img {
+	float: right;
+	width: 18px;
+	height: 18px;
+	background: url('../img/float_btn.png') 0 0 transparent;
+	margin-right: 1px;
+}
+.hotspot_obj .window .btn_holder .btn_img.hover {
+	background-position: 0 -18px;
+}
+.hotspot_obj .fx {
+	position: absolute;
+	z-index: 1;
+	top:-20px;
+	left:-19px;
+	width: 42px;
+	height: 42px;
+	background: url('../img/float_fx.png') transparent;
+}
+.hotspot_obj .radial {
+	position: absolute;
+	z-index: 1;
+	top:-5px;
+	left:-5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #f00;
+	opacity:0;
+}
+
+/* SPECIAL WINDOW SIZE */
+.hotspot_obj .window.pa.size_a, .hotspot_obj .window.pa.size_b {
+	background: url('../img/float_bg_b.png') 0 0 transparent;
+	top:-86px;
+}
+.hotspot_obj .window.size_a, .hotspot_obj .window.size_b {
+	background: url('../img/float_bg_b.png') 0 0 transparent;
+}
+.hotspot_obj .window .floater_t1.size_a {
+	margin-top: 7px;
+	line-height: 16px;
+}
+.hotspot_obj .window .btn_holder.size_a {
+	margin: -1px 12px 0;
+}
+.hotspot_obj .window .floater_t1.size_b {
+	margin-top: 6px;
+}
+.hotspot_obj .window .btn_holder.size_b {
+	margin: 0 12px 0;
+}
+
+/* IRREGULAR HOTSPOT FIX */
+.hotspots #p7_1 .radial .square_fix {
+	background: #0F0;
+	width: 100px;
+	height: 168px;
+	position: absolute;
+	top:-16px;
+	left:123px;
+}
+.hotspots #p11_1 .radial .square_fix {
+	background: #0F0;
+	width: 90px;
+	height: 182px;
+	position: absolute;
+	top:-51px;
+	left:107px;
+}
+.hotspots #p13_1 .window .btn_holder {
+	margin: 14px 12px 0;
+}
+
+#flipbook_holder .flipb{
+	background-image:url('../img/flipbuttons.png');
+	cursor:pointer;
+	display:none;
+	height:29px;
+	position:absolute;
+	top:545px;
+	width:66px;
+	z-index: 20;
+}
+#flipbook_holder #flipr{
+	background-position:right;
+	right:10px;
+}
+#flipbook_holder #flipl{
+	background-position:left;
+	left:12px;
+}

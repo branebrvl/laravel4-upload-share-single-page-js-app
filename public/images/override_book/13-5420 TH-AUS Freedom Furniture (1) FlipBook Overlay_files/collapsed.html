@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)http://cdn.assets.totallyher.com/__aus/freedom_furniture/overlay/collapsed.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Collapsed Unit</title>
+		<style type="text/css">
+			* { padding: 0; margin: 0; }
+			body { background: #000; }
+			.collapsed_unit {
+				width: 728px;
+				height: 90px;
+				overflow: hidden;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+			}
+			.collapsed_bg {
+				width: 728px;
+				height: 90px;
+				position: absolute;
+				z-index: 1;
+				opacity: 0;
+				background: url('img/collapsed_bg.jpg');
+			}
+			.collapsed_ribbon {
+				width: 810px;
+				height: 73px;
+				position: absolute;
+				z-index: 2;
+				top: 10px;
+				left: -810px;
+				background: url('img/collapsed_ribbon.png') transparent;
+			}
+			.collapsed_text {
+				width: 653px;
+				height: 45px;
+				position: absolute;
+				z-index: 3;
+				top: 22px;
+				left: 750px;
+				background: url('img/collapsed_text.png') transparent;
+			}
+			.collapsed_detail {
+				width: 728px;
+				height: 62px;
+				position: absolute;
+				z-index: 4;
+				opacity: 0;
+				top: 14px;
+				background: url('img/collapsed_fx.png') transparent;
+			}
+		</style>
+	</head>
+	<body style="">
+		<div class="collapsed_unit">
+			<div class="collapsed_detail" style="opacity: 1;"></div>
+			<div class="collapsed_text" style="left: 45px;"></div>
+			<div class="collapsed_ribbon" style="left: 0px;"></div>
+			<div class="collapsed_bg" style="opacity: 1;"></div>
+		</div>
+		<script src="ga(1).js" type="text/javascript"></script>
+		<script src="preloadjs-0.4.0.min.js" type="text/javascript"></script>
+		<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			/* 
+				itemsObj:Object 	= Object that stores our visual elements jquery reference.
+				emcGACampaign:GA 	= Analitics tracker.
+				preload:Preload 	= Preloader object, we assign the files to load and the complete anonymus function.
+			*/
+			var itemsObj 		= {}, 
+				emcGACampaign 	= "[13-5420] TH-AUS Christmas - Freedom Furniture (1) FlipBook Overlay",
+				preload 		= new createjs.LoadQueue(false);
+			preload.addEventListener("complete", function(event){ showItems(); });
+			$(document).ready(function(){
+				/* Grab our jquery objects from our DOM elements for further usage (load complete) */
+				itemsObj.bg 	= $('.collapsed_bg');
+				itemsObj.rib 	= $('.collapsed_ribbon');
+				itemsObj.txt 	= $('.collapsed_text');
+				itemsObj.fx 	= $('.collapsed_detail');
+				/* Deploy our preloader object */
+				preload.loadManifest([
+					{src:'./img/collapsed_bg.jpg'},
+					{src:'./img/collapsed_ribbon.png'},
+					{src:'./img/collapsed_text.png'},
+					{src:'./img/collapsed_fx.png'}
+				]);
+			});
+			function showItems() {
+				itemsObj.bg.animate({opacity: 1}, 1000);
+				setTimeout(function(){ itemsObj.rib.animate({left: '0px'}, 1200); },1000);
+				setTimeout(function(){ itemsObj.txt.animate({left: '45px'}, 1200); },1100);
+				setTimeout(function(){ itemsObj.fx.animate({opacity: 1}, 1500); },2300);
+			}
+		</script>
+	
+</body></html>

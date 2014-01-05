@@ -1,0 +1,9 @@
+/bootstrap/compiled.php
+/vendor
+/public/node_modules
+/public/vendor/bower_components
+/public/tmp
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db

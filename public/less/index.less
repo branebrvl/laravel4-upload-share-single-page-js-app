@@ -1,0 +1,25 @@
+// Index
+
+.fear {
+	text-align: center;
+	
+	// Using a pseudo element because this image adds no value to
+	// the semantic markup and is purely presentational
+	
+	&:after {
+		display: block;
+		margin: 50px auto;
+		width: 337px;
+		height: 366px;
+		background: url("@{base-url}/samurai.png") no-repeat 0 0;
+		content: "";
+	}
+}
+
+// Overwriting default styles from Bootstrap
+
+.jumbotron {
+	h1 {
+		color: @title-header;
+	}
+}
