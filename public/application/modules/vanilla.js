@@ -26,7 +26,7 @@ window.ev.si = window.ev.si || {};
 
   function addEvents($element) {
     // Change this to the location of your server-side upload handler:
-    var url = 'image/save';
+    var url = 'upload';
     $('#fileupload')
       .fileupload({
       url: url,

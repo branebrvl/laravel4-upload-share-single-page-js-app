@@ -32,6 +32,9 @@ ClassLoader::addDirectories(array(
 */
 
 Log::useFiles(storage_path().'/logs/laravel.log');
+     
+/* Get Monolog instance from Laravel, set ChromePHP handler */
+Log::getMonolog()->pushHandler(new \Monolog\Handler\ChromePHPHandler());
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +52,7 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+
 });
 
 /*

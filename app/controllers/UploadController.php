@@ -3,8 +3,7 @@
 class UploadController extends BaseController {
 
   public function upload(){
-      
-      $uploadFolder = "upload";
+      $uploadFolder = "uploaded-files";
       // $destinationPath = base_path(). '/' . "upload" . '/';
       $destinationPath = public_path(). '/' . $uploadFolder . '/';
 

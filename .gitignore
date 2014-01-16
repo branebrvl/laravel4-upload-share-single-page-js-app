@@ -4,6 +4,8 @@
 /public/vendor/bower_components
 /public/tmp
 /public/upload
+/public/uploaded_files
+.vagrant
 composer.phar
 composer.lock
 .DS_Store
