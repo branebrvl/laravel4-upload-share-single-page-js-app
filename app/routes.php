@@ -106,21 +106,28 @@ Route::get('foo/bar', function() {
   var_dump(storage_path());
 });
 
+Route::get('query',function() {
+
+  start('query','Simple Query');
+  Users::create(['email' => 'qwwsssw@ssd.com', ['password' => '1ss23456']]);
+  $user = Users::all();
+  l($user);
+  stop('query');
+
+  return Users::all();
+});
+
 Route::get('dump',function() {
-  Log::info(storage_path());
+
+  var_dump(App::environment());
+  var_dump(Config::get('app.providers'));
+  var_dump(Config::get('app.aliases'));
+  var_dump(Config::get('database.connections'));
   var_dump(storage_path());
+  var_dump($_ENV);
+  var_dump($_SERVER);
 });
 
 Route::get('whoami',function() {
   echo exec('whoami');
 });
-
-
-
-
-
-
-
-
-
-

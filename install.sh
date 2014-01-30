@@ -22,7 +22,7 @@ echo "--- Updating packages list ---"
 sudo apt-get update
 
 echo "--- Installing PHP-specific packages ---"
-sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt mysql-server-5.5 php5-mysql git-core
+sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core
 
 echo "--- Installing and configuring Xdebug ---"
 sudo apt-get install -y php5-xdebug
@@ -32,6 +32,9 @@ xdebug.scream=1
 xdebug.cli_color=1
 xdebug.show_local_vars=1
 EOF
+
+echo "--- Empty the content of disable_function in the php.ini file  ---"
+sudo sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5/cli/php.ini
 
 echo "--- Enabling mod-rewrite ---"
 sudo a2enmod rewrite

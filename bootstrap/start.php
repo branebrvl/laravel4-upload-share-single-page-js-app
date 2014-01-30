@@ -24,11 +24,7 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('your-machine-name'),
-
-));
+$env = $app->detectEnvironment(function() { return isset($_ENV['LARAVEL_ENV']) ? $_ENV['LARAVEL_ENV'] : 'local'; });
 
 /*
 |--------------------------------------------------------------------------

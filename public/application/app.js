@@ -7,7 +7,7 @@ window.ev.si = window.ev.si || {};
   var config = vanilla.config;
 
   var app = {
-    root: '/',
+    root: '',
     prefix: 'application/templates/',
     fetchTemplate: function(path, done) {
       var JST = window.JST = window.JST || {};
